@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Supplemental Feeding" description="How supplemental fish feeding accelerates growth, increases fish density, and improves the overall health of your lake or pond ecosystem.">
+
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href="/why-fish" style="color: #a8dbfb;" class="hover:text-white">Why Fish?</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Supplemental Feeding</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl">Supplemental Feeding</h1>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">Why Supplement?</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Natural food production in a lake — insects, plankton, forage fish — can only support a limited fish population. Supplemental feeding allows you to carry significantly more fish per acre, accelerate growth rates, and produce larger, healthier fish in a fraction of the natural time.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          For managed recreational lakes, supplemental feeding can reduce the time to catchable-size fish by 30–50%. It also makes fish more concentrated and catchable — enhancing the fishing experience for your members, guests, or community.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[
+          { metric: '2–3×', label: 'Faster growth rate vs. natural forage alone' },
+          { metric: '50%+', label: 'More fish per acre in properly supplemented lakes' },
+          { metric: '12 mo.', label: 'Potential timeline to catchable bass with feeding' },
+        ].map(stat => (
+          <div class="rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+            <div class="text-3xl font-display font-bold mb-2" style="color: #0d6aae;">{stat.metric}</div>
+            <div class="text-sm text-gray-600">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-6" style="color: #041e35;">Feeding Programs</h2>
+        <div class="space-y-5">
+          {[
+            {
+              title: 'Automatic Feeders',
+              desc: 'Timed automatic feeders dispense floating pellet feed at regular intervals — typically twice daily. This consistent, predictable feeding routine conditions fish to gather at the feeder, concentrating them and maximizing feed efficiency. Solar-powered units are ideal for remote locations.'
+            },
+            {
+              title: 'Feed Types',
+              desc: 'High-protein floating pellets (28–32% protein) are the standard for bass and bluegill programs. Catfish prefer sinking pellets. Koi and ornamental fish thrive on specialized koi pellets. Feed selection should match your target species and management goals.'
+            },
+            {
+              title: 'Feeding Rates',
+              desc: 'A general guideline is to feed what fish can consume in 5–10 minutes, twice daily. Overfeeding wastes money and degrades water quality through excess nutrient loading. Underfeeding limits the growth benefits. We can recommend appropriate rates for your fish population.'
+            },
+            {
+              title: 'Seasonal Adjustments',
+              desc: 'Fish metabolism slows in cooler water. Reduce or stop feeding when water temperatures drop below 55°F. Resume as temperatures rise in spring. In Arizona\'s mild climate, some species can be fed year-round, while others (like Bass) benefit from a winter rest period.'
+            }
+          ].map(item => (
+            <div class="p-5 rounded-xl border border-gray-100 shadow-sm">
+              <h3 class="font-semibold mb-2" style="color: #041e35;">{item.title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-6" style="background-color: #eef8ff; border: 1px solid #d6effd;">
+        <h3 class="font-semibold mb-3" style="color: #041e35;">Ready to Start a Feeding Program?</h3>
+        <p class="text-gray-600 text-sm mb-4">Pat Ann can recommend the right feed, feeding schedule, and equipment for your lake size and fish population goals.</p>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 rounded-lg font-semibold text-white text-sm" style="background-color: #0d6aae;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

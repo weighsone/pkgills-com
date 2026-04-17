@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Stocking Fish" description="Learn best practices for stocking fish in lakes and ponds. Species ratios, timing, quantity recommendations, and what to expect after stocking.">
+
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href="/why-fish" style="color: #a8dbfb;" class="hover:text-white">Why Fish?</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Stocking Fish</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl">Stocking Fish</h1>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">When to Stock</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Timing is critical for fish stocking success. In Arizona's warm climate, the best stocking windows are spring (March–May) and fall (September–November), when water temperatures are moderate and fish experience less transport stress. Summer stocking is possible but requires extra precautions for oxygen maintenance and temperature control.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Rainbow Trout are stocked exclusively in cooler months (November–March) when water temperatures are below 65°F. Tilapia and other warm-water species thrive with summer stocking.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">Recommended Stocking Ratios</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          For a new lake focused on recreational fishing, a typical starting ratio is:
+        </p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead>
+              <tr style="background-color: #041e35; color: white;">
+                <th class="px-4 py-3 text-left font-semibold">Species</th>
+                <th class="px-4 py-3 text-left font-semibold">Typical Rate (per acre)</th>
+                <th class="px-4 py-3 text-left font-semibold">Role</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                ['Bluegill', '500–1,000', 'Primary forage base'],
+                ['Largemouth Bass', '50–100', 'Top predator / sport'],
+                ['Channel Catfish', '50–100', 'Bottom feeder / sport'],
+                ['Fathead Minnow', '1,000–2,000', 'Initial forage (Year 1)'],
+                ['Redear Sunfish', '50–100', 'Snail control / sport'],
+              ].map(([species, rate, role]) => (
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 font-medium text-gray-800">{species}</td>
+                  <td class="px-4 py-3 text-gray-600">{rate}</td>
+                  <td class="px-4 py-3 text-gray-500">{role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-500 mt-2">Rates vary based on water depth, existing vegetation, management goals, and water quality. Contact us for a customized stocking plan.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">What to Expect After Stocking</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Fish need time to acclimate. In the first 2–4 weeks after stocking, fish will establish territories and adapt to the new environment. Mortality of a small percentage (typically 2–5%) is normal and should be expected — especially during warmer months.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          In a properly established lake with adequate forage, Largemouth Bass will reach catchable size (10–12 inches) within 18–24 months. Bluegill will begin spawning in the first season, building your forage base naturally.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Supplemental feeding can accelerate growth rates significantly — see our <a href="/why-fish/supplemental-feeding" style="color: #0d6aae;">Supplemental Feeding</a> page for details.
+        </p>
+      </div>
+
+      <div class="rounded-2xl p-6" style="background-color: #eef8ff; border: 1px solid #d6effd;">
+        <h3 class="font-semibold mb-3" style="color: #041e35;">Need a Custom Stocking Plan?</h3>
+        <p class="text-gray-600 text-sm mb-4">Every water body is different. Pat Ann can assess your lake and recommend the right species, quantities, and timing for your specific situation.</p>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 rounded-lg font-semibold text-white text-sm" style="background-color: #0d6aae;">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

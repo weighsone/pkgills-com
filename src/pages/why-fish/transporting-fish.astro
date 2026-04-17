@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Transporting Fish" description="Best practices for transporting live fish. Oxygen, temperature, density, and acclimation guidelines for successful fish delivery.">
+
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href="/why-fish" style="color: #a8dbfb;" class="hover:text-white">Why Fish?</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Transporting Fish</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl">Transporting Fish</h1>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">Our Transport Process</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          P.K. Gills uses specialized live-haul transport equipment to ensure fish arrive at your location alive, healthy, and stress-free. Our trucks are equipped with oxygenation systems, temperature monitoring, and properly sized tanks for each species and load density.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          We've refined our transport protocols over decades of deliveries in Arizona's challenging climate. Whether delivering to a local pond or a remote irrigation district, we maintain the same standards for fish welfare throughout every trip.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-6" style="color: #041e35;">Key Transport Factors</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            { title: 'Dissolved Oxygen', desc: 'Fish require 6–8 mg/L of dissolved oxygen during transport. We use pure oxygen injection to maintain safe levels, especially important in Arizona summer heat.' },
+            { title: 'Water Temperature', desc: 'Rapid temperature changes stress fish. We pre-condition transport water to match destination temperatures within 5°F to minimize thermal shock during release.' },
+            { title: 'Fish Density', desc: 'Overcrowding increases stress, waste, and oxygen depletion. Our load calculations ensure appropriate space per fish by species, size, and transport duration.' },
+            { title: 'Transport Time', desc: 'Shorter transport = healthier fish. We plan efficient routes and schedule deliveries during cooler parts of the day when possible to minimize stress.' },
+            { title: 'Water Quality', desc: 'Ammonia buildup in closed transport systems is monitored and managed. We use appropriate additives to maintain water chemistry during long hauls.' },
+            { title: 'Acclimation at Release', desc: 'Fish should be slowly acclimated to destination water. We provide guidance on proper release procedures to maximize survival after delivery.' },
+          ].map(item => (
+            <div class="rounded-xl p-5 border border-gray-100 shadow-sm">
+              <h3 class="font-semibold text-sm mb-2" style="color: #041e35;">{item.title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">Receiving Your Fish</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          When we arrive for delivery, your role is equally important. Here's what to prepare:
+        </p>
+        <ul class="space-y-3">
+          {[
+            'Have clear, unobstructed access to the water\'s edge for our equipment',
+            'Do not add fish to water with recently applied herbicides or algaecides',
+            'Have your stocking site\'s water temperature available — we will match transport water accordingly',
+            'Avoid stocking in direct midday sun in summer; early morning is best',
+            'Do not feed fish for 24–48 hours after stocking to allow acclimation'
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #0d6aae;" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-600 text-sm">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="rounded-2xl p-6" style="background-color: #eef8ff; border: 1px solid #d6effd;">
+        <h3 class="font-semibold mb-3" style="color: #041e35;">Schedule a Delivery</h3>
+        <p class="text-gray-600 text-sm mb-4">Ready to stock your water? Contact us to discuss species availability, delivery timing, and pricing.</p>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 rounded-lg font-semibold text-white text-sm" style="background-color: #0d6aae;">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

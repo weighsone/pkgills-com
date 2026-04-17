@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Irrigation Districts RFP" description="Request a proposal for fish stocking services for irrigation canals, reservoirs, and municipal water systems in Arizona from P.K. Gills Aquatics.">
+
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href="/contact" style="color: #a8dbfb;" class="hover:text-white">Contact</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Irrigation Districts RFP</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl mb-4">Irrigation Districts RFP</h1>
+      <p class="text-xl max-w-2xl" style="color: #a8dbfb;">P.K. Gills has extensive experience working with Arizona irrigation districts. Submit your request for proposal below.</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="rounded-2xl p-5 mb-8 border-l-4" style="background-color: #eef8ff; border-color: #0d6aae;">
+        <p class="text-sm text-gray-700">P.K. Gills Aquatics has a long-standing relationship with irrigation districts across Arizona, including the Roosevelt Water Conservation District. We understand the unique requirements of large-scale canal and reservoir stocking programs.</p>
+      </div>
+
+      <div class="rounded-2xl border border-gray-100 shadow-sm p-8">
+        <form action="mailto:patannchurch@pkgills.com" method="post" enctype="text/plain" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5" for="contact">Contact Name</label>
+              <input type="text" id="contact" name="contactName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5" for="title">Title / Position</label>
+              <input type="text" id="title" name="title" class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="e.g., Operations Manager" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5" for="district">District / Organization Name</label>
+            <input type="text" id="district" name="district" required class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="e.g., Roosevelt Water Conservation District" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5" for="email">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="you@district.org" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1.5" for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="(480) 555-0100" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5" for="waterSystem">Water System Description</label>
+            <textarea id="waterSystem" name="waterSystem" rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none resize-none" placeholder="Describe your canal network, reservoirs, or water storage facilities (size, location, number of units)..."></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Services Requested</label>
+            <div class="space-y-2">
+              {[
+                'Mosquitofish (Gambusia) Stocking',
+                'Vegetation Management Fish (Tilapia / Grass Carp)',
+                'General Fish Stocking Program',
+                'Ongoing Supply Contract',
+                'Consultation / Site Assessment'
+              ].map(service => (
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value={service} class="rounded border-gray-300" />
+                  <span class="text-sm text-gray-700">{service}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5" for="timeline">Desired Timeline</label>
+            <input type="text" id="timeline" name="timeline" class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none" placeholder="e.g., Spring 2026, ASAP, Ongoing annual contract" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5" for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none resize-none" placeholder="Any specific requirements, past experience with fish stocking, permit status, budget parameters..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full px-6 py-3 rounded-xl font-semibold text-white" style="background-color: #0d6aae;">
+            Submit RFP
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</Layout>

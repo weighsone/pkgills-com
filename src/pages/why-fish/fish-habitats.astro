@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Fish Habitats & Shelters" description="How fish habitat structures improve your lake ecosystem, increase fish populations, and enhance fishing. Brush piles, spawning beds, and aquatic structure.">
+
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href="/why-fish" style="color: #a8dbfb;" class="hover:text-white">Why Fish?</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Fish Habitats & Shelters</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl">Fish Habitats & Shelters</h1>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-4" style="color: #041e35;">Why Habitat Matters</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          In a natural lake, fish have evolved to use complex habitat — submerged logs, rocky outcrops, aquatic vegetation, and fallen brush — for shelter, spawning, feeding, and escape from predators. Man-made ponds and managed lakes often lack this structural complexity, limiting their fish-carrying capacity and biodiversity.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Adding artificial habitat structures can dramatically increase your lake's fish-holding capacity, improve spawning success, and concentrate fish in predictable locations — making for better fishing and a healthier ecosystem.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-2xl mb-6" style="color: #041e35;">Types of Fish Habitat</h2>
+        <div class="space-y-5">
+          {[
+            {
+              title: 'Brush Piles',
+              desc: 'Submerged brush piles created from tree trimmings or Christmas trees provide excellent cover for Bluegill, Bass, and Crappie. They create spawning zones and ambush points for predators. Placement in 4–12 feet of water near depth transitions is most effective.'
+            },
+            {
+              title: 'Spawning Beds & Gravel Areas',
+              desc: 'Bass and Bluegill require sandy or gravelly substrate for nest building. In lakes with uniform mud bottoms, adding gravel in 1–4 foot shallows significantly improves spawning success and fry survival rates.'
+            },
+            {
+              title: 'Aquatic Vegetation Zones',
+              desc: 'Managed areas of native aquatic plants provide critical juvenile fish habitat, reduce bank erosion, and support the invertebrate populations that form the base of the food chain. Cattails, bulrush, and water lilies all play important roles.'
+            },
+            {
+              title: 'Artificial Structure',
+              desc: 'Manufactured fish habitat products (PVC pipe assemblies, plastic trees, spawning mats) provide durable, long-lasting shelter without the decomposition issues of natural materials. These are particularly useful in deeper lakes.'
+            },
+            {
+              title: 'Dock and Bank Structure',
+              desc: 'Floating docks, pier pilings, and riprap bank reinforcement all create fish habitat. Shade from docks provides thermal refuge in Arizona summers and concentrates baitfish — making docks natural fishing hot spots.'
+            }
+          ].map(item => (
+            <div class="p-5 rounded-xl border border-gray-100 shadow-sm">
+              <h3 class="font-semibold mb-2" style="color: #041e35;">{item.title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-6" style="background-color: #eef8ff; border: 1px solid #d6effd;">
+        <h3 class="font-semibold mb-3" style="color: #041e35;">Habitat Enhancement Planning</h3>
+        <p class="text-gray-600 text-sm mb-4">P.K. Gills can advise on habitat improvements that complement your fish stocking program. The right structure in the right location makes a significant difference in fish survival and growth.</p>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 rounded-lg font-semibold text-white text-sm" style="background-color: #0d6aae;">Ask Us About Habitat</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

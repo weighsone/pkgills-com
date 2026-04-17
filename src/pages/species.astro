@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const species = [
+  {
+    name: 'Largemouth Bass',
+    scientific: 'Micropterus salmoides',
+    category: 'Sport Fish',
+    color: '#0d6aae',
+    description: 'The "king" of sport fish. Largemouth Bass are top predators that provide excellent population control of forage fish and create outstanding recreational fishing. They are adaptable and thrive in warm, calm water bodies.'
+  },
+  {
+    name: 'Bluegill',
+    scientific: 'Lepomis macrochirus',
+    category: 'Forage / Sport Fish',
+    color: '#059669',
+    description: 'One of the most important fish in a balanced lake ecosystem. Bluegill serve as forage for bass, reproduce prolifically, and provide fantastic light-tackle sport fishing. Essential for any managed lake.'
+  },
+  {
+    name: 'Redear Sunfish',
+    scientific: 'Lepomis microlophus',
+    category: 'Forage / Sport Fish',
+    color: '#059669',
+    description: 'Known as "shellcrackers," Redear Sunfish specialize in eating snails and other mollusks, helping to control populations that can otherwise damage lake ecosystems. Great table fare and sporting fish.'
+  },
+  {
+    name: 'Green Sunfish',
+    scientific: 'Lepomis cyanellus',
+    category: 'Forage Fish',
+    color: '#059669',
+    description: 'Highly adaptable and hardy, Green Sunfish tolerate poor water quality conditions. They fill important forage roles and help maintain fish populations in stressed or marginal water conditions.'
+  },
+  {
+    name: 'Black Crappie',
+    scientific: 'Pomoxis nigromaculatus',
+    category: 'Sport Fish',
+    color: '#7c3aed',
+    description: 'Highly prized sport fish known for their excellent flavor and schooling behavior. Crappie thrive in clear-water lakes with structure and are a popular target for recreational anglers of all skill levels.'
+  },
+  {
+    name: 'Channel Catfish',
+    scientific: 'Ictalurus punctatus',
+    category: 'Sport / Management Fish',
+    color: '#d97706',
+    description: 'Excellent bottom feeders that help clean lake environments while providing outstanding sport fishing and table fare. Channel Catfish are hardy, fast-growing, and popular with anglers of all ages.'
+  },
+  {
+    name: 'Fathead Minnow',
+    scientific: 'Pimephales promelas',
+    category: 'Forage Fish',
+    color: '#6b7280',
+    description: 'The ideal supplemental forage fish for young predators. Fathead Minnows reproduce rapidly and provide a consistent food source for bass, crappie, and catfish in the early stages of lake development.'
+  },
+  {
+    name: 'Goldfish',
+    scientific: 'Carassius auratus',
+    category: 'Decorative / Mosquito Control',
+    color: '#f59e0b',
+    description: 'Goldfish serve dual purposes — they are beautiful in decorative ponds and water features, and they are effective mosquito larvae predators in standing water bodies. Hardy and long-lived in proper conditions.'
+  },
+  {
+    name: 'Koi',
+    scientific: 'Cyprinus rubrofuscus',
+    category: 'Decorative',
+    color: '#f59e0b',
+    description: 'The jewel of ornamental fish keeping. Koi bring stunning color and elegance to decorative ponds and water features. We supply quality koi that are healthy, vibrant, and well-suited to Arizona\'s climate.'
+  },
+  {
+    name: 'Mosquito Fish',
+    scientific: 'Gambusia affinis',
+    category: 'Mosquito Control',
+    color: '#dc2626',
+    description: 'Nature\'s mosquito control solution. Gambusia (mosquitofish) are aggressive predators of mosquito larvae and are widely used by health departments and irrigation districts across Arizona for vector control.'
+  },
+  {
+    name: 'Israeli Carp',
+    scientific: 'Cyprinus carpio',
+    category: 'Management Fish',
+    color: '#0284c7',
+    description: 'Common Carp play a role in lake ecosystem management. They can be stocked as part of targeted management programs where their bottom-feeding behavior can help manage sediment and certain vegetation.'
+  },
+  {
+    name: 'Tilapia',
+    scientific: 'Oreochromis niloticus',
+    category: 'Vegetation Management',
+    color: '#059669',
+    description: 'Excellent vegetation management fish. Tilapia consume algae, aquatic weeds, and organic matter — reducing algae blooms and improving water clarity. Particularly effective in warm Arizona water bodies.'
+  },
+  {
+    name: 'White Amur (Grass Carp)',
+    scientific: 'Ctenopharyngodon idella',
+    category: 'Vegetation Management',
+    color: '#059669',
+    description: 'The premier biological control for aquatic vegetation. Triploid (sterile) Grass Carp are used in permitted lakes to control excessive weed growth without chemicals. Requires a state permit in Arizona.'
+  },
+  {
+    name: 'Rainbow Trout',
+    scientific: 'Oncorhynchus mykiss',
+    category: 'Sport Fish (Seasonal)',
+    color: '#7c3aed',
+    description: 'Available seasonally for cold-water stocking. Rainbow Trout provide exciting sport fishing during cooler Arizona months and are popular choices for fishing derbies, private lakes, and recreational programs.'
+  }
+];
+
+const categories = [...new Set(species.map(s => s.category.split(' / ')[0]))];
+---
+
+<Layout title="Species Available" description="P.K. Gills Aquatics supplies 14+ species of live fish for lakes, ponds, golf courses, and irrigation districts in Arizona. Largemouth Bass, Bluegill, Catfish, Koi, and more.">
+
+  <!-- Hero -->
+  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Species Available</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl mb-4">Species Available</h1>
+      <p class="text-xl max-w-2xl" style="color: #a8dbfb;">We supply 14+ species of healthy, farm-raised live fish for delivery across Arizona. Contact us for current availability and pricing.</p>
+    </div>
+  </section>
+
+  <!-- Species Grid -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {species.map(fish => (
+          <div class="rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            <div class="h-2" style={`background-color: ${fish.color};`}></div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg" style="color: #041e35;">{fish.name}</h3>
+                  <p class="text-xs italic text-gray-400">{fish.scientific}</p>
+                </div>
+                <span class="text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap" style={`background-color: ${fish.color}20; color: ${fish.color};`}>
+                  {fish.category.split(' / ')[0]}
+                </span>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed">{fish.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 rounded-2xl p-8 text-center" style="background: linear-gradient(135deg, #041e35, #063356);">
+        <h2 class="font-display font-bold text-white text-2xl mb-3">Ready to Stock Your Water?</h2>
+        <p class="mb-6" style="color: #a8dbfb;">Contact us for current availability, pricing, and delivery scheduling. We deliver throughout Arizona.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white" style="background-color: #0d6aae;">Request a Quote</a>
+          <a href="tel:4804560744" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold" style="border: 2px solid rgba(168,219,251,0.3); color: #a8dbfb;">Call (480) 456-0744</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
