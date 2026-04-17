@@ -125,7 +125,7 @@ const categories = [...new Set(species.map(s => s.category.split(' / ')[0]))];
   <!-- Hero -->
   <section class="py-16 relative" style="background: linear-gradient(135deg, #041e35, #063356);">
     <div class="absolute inset-0 overflow-hidden">
-      <img src="/images/Header-Species.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+      <img src={u("/images/Header-Species.jpg")} alt="" class="w-full h-full object-cover opacity-20" />
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
@@ -146,7 +146,7 @@ const categories = [...new Set(species.map(s => s.category.split(' / ')[0]))];
           <div class="rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             {fish.image ? (
               <div class="h-40 overflow-hidden" style={`background-color: ${fish.color}15;`}>
-                <img src={fish.image} alt={fish.name} class="w-full h-full object-contain p-2" loading="lazy" />
+                <img src={u(fish.image)} alt={fish.name} class="w-full h-full object-contain p-2" loading="lazy" />
               </div>
             ) : (
               <div class="h-2" style={`background-color: ${fish.color};`}></div>
