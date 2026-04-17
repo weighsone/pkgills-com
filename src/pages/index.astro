@@ -1,11 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { u } from '../utils/url';
 ---
 
 <Layout title="Live Fish Supply & Aquatic Management" description="P.K. Gills Aquatics — Live fish supply and sustainable aquatic water management in Arizona. Over 30 years of experience serving lakes, ponds, golf courses, and irrigation districts.">
 
   <!-- Hero Section -->
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #020e1a 0%, #041e35 40%, #063356 70%, #094e84 100%);">
+    <!-- Hero background image with overlay -->
+    <div class="absolute inset-0">
+      <img src="/images/Header-Home.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
     <div class="absolute inset-0 opacity-10">
       <div class="absolute rounded-full" style="width: 600px; height: 600px; top: -100px; right: -100px; border: 1px solid #38a6f0;"></div>
       <div class="absolute rounded-full" style="width: 400px; height: 400px; top: 50px; right: 50px; border: 1px solid #38a6f0;"></div>
@@ -27,11 +32,11 @@ import Layout from '../layouts/Layout.astro';
           P.K. Gills is a division of Arizona-based Fresh Catch Fish. We supply live fish and provide comprehensive aquatic water management services for lakes, ponds, golf courses, and irrigation districts across Arizona.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white transition-all duration-200 shadow-lg" style="background: linear-gradient(135deg, #0d6aae, #094e84);">
+          <a href={u("/contact")} class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white transition-all duration-200 shadow-lg" style="background: linear-gradient(135deg, #0d6aae, #094e84);">
             Request a Quote
             <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
-          <a href="/species" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold transition-all duration-200" style="border: 2px solid rgba(56,166,240,0.5); color: #a8dbfb; background: rgba(13,106,174,0.15);">
+          <a href={u("/species")} class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold transition-all duration-200" style="border: 2px solid rgba(56,166,240,0.5); color: #a8dbfb; background: rgba(13,106,174,0.15);">
             View Species Available
           </a>
         </div>
@@ -86,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Live Fish Stocking</h3>
           <p class="text-gray-600 text-sm leading-relaxed">We supply and deliver 14+ species of live fish — bass, bluegill, catfish, koi, trout, and more — direct to your water body.</p>
-          <a href="/species" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #0d6aae;">
+          <a href={u("/species")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #0d6aae;">
             View species <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -99,7 +104,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Lake & Pond Management</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Comprehensive management programs including aeration, chemical applications, mechanical harvesting, dye treatments, and food chain balancing.</p>
-          <a href="/why-fish" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #059669;">
+          <a href={u("/why-fish")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #059669;">
             Learn more <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -112,7 +117,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Golf Courses & HOAs</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Specialized services for golf course water features and HOA lakes — improving aesthetics, water quality, and recreational fishing opportunities.</p>
-          <a href="/contact/lakes-ponds-golf" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #d97706;">
+          <a href={u("/contact/lakes-ponds-golf")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #d97706;">
             Request RFP <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -125,7 +130,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Irrigation Districts</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Targeted fish stocking programs for irrigation canals and reservoirs — mosquito control, vegetation management, and ecosystem balance.</p>
-          <a href="/contact/irrigation-districts" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #7c3aed;">
+          <a href={u("/contact/irrigation-districts")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #7c3aed;">
             Request RFP <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -138,7 +143,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Mosquito Control</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Natural mosquito control using Gambusia (mosquitofish) and Goldfish — a sustainable, chemical-free solution for standing water bodies.</p>
-          <a href="/contact/goldfish-mosquitofish-quote" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #dc2626;">
+          <a href={u("/contact/goldfish-mosquitofish-quote")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #dc2626;">
             Get a quote <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -151,7 +156,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="font-display font-bold text-xl mb-2" style="color: #041e35;">Decorative Ponds</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Beautiful Koi and Goldfish for decorative ponds and water gardens. We source healthy, vibrant fish to enhance your property.</p>
-          <a href="/species" class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #0284c7;">
+          <a href={u("/species")} class="inline-flex items-center mt-4 text-sm font-semibold" style="color: #0284c7;">
             View species <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -172,45 +177,23 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-gray-600 leading-relaxed mb-6">
             Based in Chandler, Arizona, we serve lakes, ponds, golf courses, irrigation districts, and decorative water features throughout the state. Our owner's 30+ year track record means you get proven expertise with every delivery.
           </p>
-          <a href="/about" class="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white" style="background-color: #0d6aae;">
+          <a href={u("/about")} class="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white" style="background-color: #0d6aae;">
             Meet Pat Ann Church
             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <div class="rounded-2xl overflow-hidden" style="aspect-ratio: 1; background: linear-gradient(135deg, #063356, #094e84);">
-            <div class="w-full h-full flex items-center justify-center text-white">
-              <div class="text-center p-6">
-                <div class="text-4xl font-display font-bold mb-2">FCF</div>
-                <div class="text-sm opacity-75">Fresh Catch Fish</div>
-              </div>
-            </div>
+          <div class="rounded-2xl overflow-hidden" style="aspect-ratio: 1;">
+            <img src="/images/Tempe-Town-Lake-Fish-Truck.jpg" alt="P.K. Gills delivery truck at Tempe Town Lake" class="w-full h-full object-cover" />
           </div>
-          <div class="rounded-2xl overflow-hidden mt-6" style="aspect-ratio: 1; background: linear-gradient(135deg, #014e3b, #027055);">
-            <div class="w-full h-full flex items-center justify-center text-white p-6">
-              <div class="text-center">
-                <svg class="w-10 h-10 mx-auto mb-2 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <div class="text-sm font-medium">Sustainable Management</div>
-              </div>
-            </div>
+          <div class="rounded-2xl overflow-hidden mt-6" style="aspect-ratio: 1;">
+            <img src="/images/Tempe-Town-Lake-Fish-Pat.jpg" alt="Pat Ann Church at Tempe Town Lake fish delivery" class="w-full h-full object-cover" />
           </div>
-          <div class="rounded-2xl overflow-hidden" style="aspect-ratio: 1; background: linear-gradient(135deg, #1c1917, #292524);">
-            <div class="w-full h-full flex items-center justify-center text-white">
-              <div class="text-center p-6">
-                <div class="text-3xl font-display font-bold mb-1">AZ</div>
-                <div class="text-sm opacity-75">Chandler, Arizona</div>
-              </div>
-            </div>
+          <div class="rounded-2xl overflow-hidden" style="aspect-ratio: 1;">
+            <img src="/images/Dobson-Fishing-1.jpg" alt="Dobson Ranch fishing derby" class="w-full h-full object-cover" />
           </div>
-          <div class="rounded-2xl overflow-hidden mt-6" style="aspect-ratio: 1; background: linear-gradient(135deg, #0d6aae, #1488d8);">
-            <div class="w-full h-full flex items-center justify-center text-white">
-              <div class="text-center p-6">
-                <div class="text-4xl font-display font-bold mb-1">14+</div>
-                <div class="text-sm opacity-75">Species</div>
-              </div>
-            </div>
+          <div class="rounded-2xl overflow-hidden mt-6" style="aspect-ratio: 1;">
+            <img src="/images/patdel1.jpg" alt="Pat Ann Church fish delivery" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -242,7 +225,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
       <div class="text-center mt-8">
-        <a href="/testimonials" class="inline-flex items-center gap-2 text-sm font-semibold" style="color: #0d6aae;">
+        <a href={u("/testimonials")} class="inline-flex items-center gap-2 text-sm font-semibold" style="color: #0d6aae;">
           Read all testimonials <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -255,7 +238,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="font-display font-bold text-white mb-4" style="font-size: clamp(1.75rem, 3vw, 2.5rem);">Ready to Improve Your Water Quality?</h2>
       <p class="text-xl mb-8" style="color: #a8dbfb;">Contact us today for a free consultation and competitive quote on live fish or aquatic management services.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white shadow-lg" style="background: linear-gradient(135deg, #0d6aae, #094e84);">
+        <a href={u("/contact")} class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white shadow-lg" style="background: linear-gradient(135deg, #0d6aae, #094e84);">
           Get a Free Quote
         </a>
         <a href="tel:4804560744" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold" style="border: 2px solid rgba(168,219,251,0.4); color: #a8dbfb;">

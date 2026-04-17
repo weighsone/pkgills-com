@@ -1,15 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { u } from '../../utils/url';
 ---
 
 <Layout title="Lakes, Ponds & Golf Course RFP" description="Request a quote or proposal for lake, pond, and golf course aquatic management services from P.K. Gills Aquatics in Arizona.">
 
-  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-16 relative" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="/images/Header-Contact.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
-        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <a href={u("/")} style="color: #a8dbfb;" class="hover:text-white">Home</a>
         <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        <a href="/contact" style="color: #a8dbfb;" class="hover:text-white">Contact</a>
+        <a href={u("/contact")} style="color: #a8dbfb;" class="hover:text-white">Contact</a>
         <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         <span>Lakes, Ponds & Golf</span>
       </nav>

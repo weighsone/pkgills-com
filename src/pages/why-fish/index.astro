@@ -1,21 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { u } from '../../utils/url';
 
 const subpages = [
-  { href: '/why-fish/stocking-fish', title: 'Stocking Fish', desc: 'How and when to stock fish for optimal results.' },
-  { href: '/why-fish/transporting-fish', title: 'Transporting Fish', desc: 'Best practices for safe live fish transport.' },
-  { href: '/why-fish/fish-habitats', title: 'Fish Habitats & Shelters', desc: 'Enhancing your water body with proper structure.' },
-  { href: '/why-fish/supplemental-feeding', title: 'Supplemental Feeding', desc: 'Accelerating growth with supplemental feed programs.' },
+  { href: u('/why-fish/stocking-fish'), title: 'Stocking Fish', desc: 'How and when to stock fish for optimal results.' },
+  { href: u('/why-fish/transporting-fish'), title: 'Transporting Fish', desc: 'Best practices for safe live fish transport.' },
+  { href: u('/why-fish/fish-habitats'), title: 'Fish Habitats & Shelters', desc: 'Enhancing your water body with proper structure.' },
+  { href: u('/why-fish/supplemental-feeding'), title: 'Supplemental Feeding', desc: 'Accelerating growth with supplemental feed programs.' },
 ];
 ---
 
 <Layout title="Why Fish?" description="Learn why fish are essential to healthy lakes and ponds. Aquatic food chains, lake management strategies, and why proper stocking creates better water quality.">
 
   <!-- Hero -->
-  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-16 relative" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="/images/Header-Why.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
-        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <a href={u("/")} style="color: #a8dbfb;" class="hover:text-white">Home</a>
         <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         <span>Why Fish?</span>
       </nav>
@@ -124,7 +128,7 @@ const subpages = [
           <div class="rounded-2xl p-6" style="background: linear-gradient(135deg, #041e35, #063356);">
             <h3 class="font-display font-semibold text-white mb-3">Get Expert Advice</h3>
             <p class="text-sm mb-4" style="color: #a8dbfb;">Not sure what your lake needs? Pat Ann has been advising on water management since 1974.</p>
-            <a href="/contact" class="block w-full text-center px-4 py-3 rounded-xl font-semibold text-sm text-white" style="background-color: #0d6aae;">Contact Us</a>
+            <a href={u("/contact")} class="block w-full text-center px-4 py-3 rounded-xl font-semibold text-sm text-white" style="background-color: #0d6aae;">Contact Us</a>
           </div>
         </aside>
       </div>

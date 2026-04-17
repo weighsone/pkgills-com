@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { u } from '../utils/url';
 
 const resources = [
   {
@@ -41,7 +42,7 @@ const resources = [
   <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
-        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <a href={u("/")} style="color: #a8dbfb;" class="hover:text-white">Home</a>
         <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         <span>Articles & Links</span>
       </nav>
@@ -72,7 +73,7 @@ const resources = [
       <div class="rounded-2xl p-8 text-center border border-gray-200">
         <h3 class="font-display font-bold text-xl mb-3" style="color: #041e35;">Have a Question Not Covered Here?</h3>
         <p class="text-gray-600 mb-5">Pat Ann's 50 years of experience means she's likely encountered your situation before. Reach out directly for expert advice.</p>
-        <a href="/contact" class="inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white" style="background-color: #0d6aae;">Ask Pat Ann</a>
+        <a href={u("/contact")} class="inline-flex items-center px-6 py-3 rounded-xl font-semibold text-white" style="background-color: #0d6aae;">Ask Pat Ann</a>
       </div>
     </div>
   </section>

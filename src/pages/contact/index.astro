@@ -1,13 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { u } from '../../utils/url';
 ---
 
 <Layout title="Contact Us" description="Contact P.K. Gills Aquatics for live fish supply and aquatic management services in Arizona. Call (480) 456-0744 or email PatAnnChurch@pkgills.com.">
 
-  <section class="py-16" style="background: linear-gradient(135deg, #041e35, #063356);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-16 relative" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="/images/Header-Contact.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
-        <a href="/" style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <a href={u("/")} style="color: #a8dbfb;" class="hover:text-white">Home</a>
         <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         <span>Contact Us</span>
       </nav>
@@ -64,21 +68,21 @@ import Layout from '../../layouts/Layout.astro';
           <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
             <div class="px-4 py-3 font-semibold text-white text-sm" style="background-color: #041e35;">Specialized Request Forms</div>
             <div class="divide-y divide-gray-100">
-              <a href="/contact/lakes-ponds-golf" class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
+              <a href={u("/contact/lakes-ponds-golf")} class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
                 <div>
                   <div class="text-sm font-medium text-gray-800 group-hover:text-blue-700">Lakes, Ponds & Golf RFP</div>
                   <div class="text-xs text-gray-500">Golf courses, HOAs, private lakes</div>
                 </div>
                 <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </a>
-              <a href="/contact/goldfish-mosquitofish-quote" class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
+              <a href={u("/contact/goldfish-mosquitofish-quote")} class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
                 <div>
                   <div class="text-sm font-medium text-gray-800 group-hover:text-blue-700">Goldfish & Mosquitofish Quote</div>
                   <div class="text-xs text-gray-500">Decorative ponds & mosquito control</div>
                 </div>
                 <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </a>
-              <a href="/contact/irrigation-districts" class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
+              <a href={u("/contact/irrigation-districts")} class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors group">
                 <div>
                   <div class="text-sm font-medium text-gray-800 group-hover:text-blue-700">Irrigation Districts RFP</div>
                   <div class="text-xs text-gray-500">Canals, reservoirs, municipal water</div>
