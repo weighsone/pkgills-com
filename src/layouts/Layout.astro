@@ -8,23 +8,27 @@ interface Props {
 
 const { title, description = 'P.K. Gills Aquatics — Live fish supply and sustainable aquatic water management in Chandler, Arizona.' } = Astro.props;
 
+// BASE_URL = '/pkgills-com/' on GitHub Pages staging, '/' on custom domain
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // strip trailing slash
+const u = (path: string) => `${base}${path}`; // e.g. u('/about') → '/pkgills-com/about'
+
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
+  { href: u('/'), label: 'Home' },
+  { href: u('/about'), label: 'About Us' },
   {
-    href: '/why-fish',
+    href: u('/why-fish'),
     label: 'Why Fish?',
     children: [
-      { href: '/why-fish/stocking-fish', label: 'Stocking Fish' },
-      { href: '/why-fish/transporting-fish', label: 'Transporting Fish' },
-      { href: '/why-fish/fish-habitats', label: 'Fish Habitats & Shelters' },
-      { href: '/why-fish/supplemental-feeding', label: 'Supplemental Feeding' },
+      { href: u('/why-fish/stocking-fish'), label: 'Stocking Fish' },
+      { href: u('/why-fish/transporting-fish'), label: 'Transporting Fish' },
+      { href: u('/why-fish/fish-habitats'), label: 'Fish Habitats & Shelters' },
+      { href: u('/why-fish/supplemental-feeding'), label: 'Supplemental Feeding' },
     ]
   },
-  { href: '/species', label: 'Species Available' },
-  { href: '/articles', label: 'Articles & Links' },
-  { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: u('/species'), label: 'Species Available' },
+  { href: u('/articles'), label: 'Articles & Links' },
+  { href: u('/testimonials'), label: 'Testimonials' },
+  { href: u('/contact'), label: 'Contact Us' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -50,7 +54,7 @@ const currentPath = Astro.url.pathname;
         <div class="flex items-center justify-between h-16 md:h-20">
 
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-3 group">
+          <a href={u('/')} class="flex items-center gap-3 group">
             <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #0d6aae, #059669);">
               <svg viewBox="0 0 24 24" class="w-6 h-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -98,7 +102,7 @@ const currentPath = Astro.url.pathname;
             <a href="tel:4804560744" class="text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors">
               (480) 456-0744
             </a>
-            <a href="/contact" class="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors" style="background-color: #0d6aae;" onmouseover="this.style.backgroundColor='#094e84'" onmouseout="this.style.backgroundColor='#0d6aae'">
+            <a href={u('/contact')} class="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors" style="background-color: #0d6aae;" onmouseover="this.style.backgroundColor='#094e84'" onmouseout="this.style.backgroundColor='#0d6aae'">
               Get a Quote
             </a>
           </div>
@@ -136,7 +140,7 @@ const currentPath = Astro.url.pathname;
           ))}
           <div class="pt-2 border-t border-gray-100">
             <a href="tel:4804560744" class="block px-3 py-2 text-sm font-medium text-gray-600">(480) 456-0744</a>
-            <a href="/contact" class="block mt-1 px-3 py-2 rounded-lg text-sm font-semibold text-white text-center" style="background-color: #0d6aae;">Get a Quote</a>
+            <a href={u('/contact')} class="block mt-1 px-3 py-2 rounded-lg text-sm font-semibold text-white text-center" style="background-color: #0d6aae;">Get a Quote</a>
           </div>
         </nav>
       </div>
@@ -169,7 +173,7 @@ const currentPath = Astro.url.pathname;
               {navLinks.filter(l => !l.children).map(link => (
                 <li><a href={link.href} class="text-sm transition-colors hover:text-white" style="color: #9ca3af;">{link.label}</a></li>
               ))}
-              <li><a href="/why-fish" class="text-sm transition-colors hover:text-white" style="color: #9ca3af;">Why Fish?</a></li>
+              <li><a href={u('/why-fish')} class="text-sm transition-colors hover:text-white" style="color: #9ca3af;">Why Fish?</a></li>
             </ul>
           </div>
 
