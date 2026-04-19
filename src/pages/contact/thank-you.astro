@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { u } from '../../utils/url';
+---
+
+<Layout title="Message Sent" description="Thank you for contacting P.K. Gills Aquatics. We'll be in touch shortly.">
+
+  <section class="py-16 relative" style="background: linear-gradient(135deg, #041e35, #063356);">
+    <div class="absolute inset-0 overflow-hidden">
+      <img src={u("/images/Header-Contact-scene.jpg")} alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-sm mb-6" style="color: #6ec2f7;">
+        <a href={u("/")} style="color: #a8dbfb;" class="hover:text-white">Home</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <a href={u("/contact")} style="color: #a8dbfb;" class="hover:text-white">Contact</a>
+        <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <span>Message Sent</span>
+      </nav>
+      <h1 class="font-display font-bold text-white text-4xl md:text-5xl mb-4">Message Sent</h1>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <!-- Checkmark -->
+      <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8" style="background-color: #d6effd;">
+        <svg class="w-10 h-10" style="color: #0d6aae;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <h2 class="font-display font-bold text-3xl mb-4" style="color: #041e35;">Thanks, we got it!</h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-4">
+        Pat Ann will be in touch with you shortly. If your matter is urgent, give her a call directly.
+      </p>
+      <a href="tel:4804560744" class="inline-block font-semibold text-lg mb-10" style="color: #0d6aae;">(480) 456-0744</a>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+        <a href={u("/")} class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white" style="background-color: #0d6aae;">
+          Back to Home
+        </a>
+        <a href={u("/species")} class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold" style="border: 2px solid #0d6aae; color: #0d6aae;">
+          Browse Species
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
