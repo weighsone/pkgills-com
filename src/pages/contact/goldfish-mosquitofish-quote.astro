@@ -44,9 +44,11 @@ import { u } from '../../utils/url';
       </div>
 
       <div class="rounded-2xl border border-gray-100 shadow-sm p-8">
-        <form action="https://formspree.io/f/mrerklqv" method="post" class="space-y-5">
-              <input type="hidden" name="_subject" value="Goldfish & Mosquitofish Quote — PK Gills Website" />
-              <input type="hidden" name="_next" value="https://dev.pkgills.com/contact/goldfish-mosquitofish-quote" />
+        <form action="https://api.web3forms.com/submit" method="post" class="space-y-5">
+          <input type="hidden" name="access_key" value="29d173aa-d4a8-4a8a-af28-8cbeeed87f68" />
+          <input type="hidden" name="subject" value="Goldfish & Mosquitofish Quote — PK Gills Website" />
+          <input type="hidden" name="redirect" value="https://dev.pkgills.com/contact/goldfish-mosquitofish-quote" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1.5" for="name">Name</label>
